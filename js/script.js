@@ -3,24 +3,22 @@
 /* jshint browser: true */
 "use strict";
 
-console.log('arr' + "-object");
-console.log(4 + +"5");
+const numberOfFilms = +prompt('Сколько фильмов вы уже смотрели?', '');
 
-let incr = 10,
-    decr = 10;
+const personalMovieDB  = {
+   count: numberOfFilms,
+   movies: {},
+   actors: {},
+   genres: [],
+   privat: false 
+};
 
-//++incr;
-//--decr;
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько его отцените?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько его отцените?', '');
 
-console.log(++incr);
-console.log(--decr);
+personalMovieDB.movies[a] = b;      
+personalMovieDB.movies[c] = d;
 
-console.log(5%2);
-
-console.log(2*4 === '8');
- 
-const isChecket = false,
-      isClose = false;
-
-console.log(isChecket || !isClose);      
-
+console.log(personalMovieDB);
